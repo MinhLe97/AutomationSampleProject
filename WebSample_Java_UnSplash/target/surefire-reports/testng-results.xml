@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-02-28T15:35:04 ICT" name="TestWeb" finished-at="2021-02-28T15:36:46 ICT" duration-ms="101650">
+    <groups>
+    </groups>
+    <test started-at="2021-02-28T15:35:04 ICT" name="Command line test" finished-at="2021-02-28T15:36:46 ICT" duration-ms="101650">
+      <class name="TestWeb">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:35:04 ICT" name="setUp" finished-at="2021-02-28T15:35:04 ICT" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginPage()[pri:1, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:35:04 ICT" name="loginPage" finished-at="2021-02-28T15:35:21 ICT" duration-ms="17285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:35:21 ICT" name="cleanUp" finished-at="2021-02-28T15:35:21 ICT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method signature="updateUsername()[pri:2, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:35:21 ICT" name="updateUsername" finished-at="2021-02-28T15:35:46 ICT" duration-ms="25085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUsername -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:35:46 ICT" name="cleanUp" finished-at="2021-02-28T15:35:47 ICT" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method signature="listOfLikedPhotos()[pri:3, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:35:47 ICT" name="listOfLikedPhotos" finished-at="2021-02-28T15:36:05 ICT" duration-ms="18536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- listOfLikedPhotos -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:36:05 ICT" name="cleanUp" finished-at="2021-02-28T15:36:05 ICT" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method signature="removePhotosFromCollection()[pri:4, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:36:05 ICT" name="removePhotosFromCollection" finished-at="2021-02-28T15:36:23 ICT" duration-ms="17877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removePhotosFromCollection -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:36:23 ICT" name="cleanUp" finished-at="2021-02-28T15:36:23 ICT" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method signature="downloadPhotos()[pri:5, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:36:23 ICT" name="downloadPhotos" finished-at="2021-02-28T15:36:45 ICT" duration-ms="22249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadPhotos -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestWeb@15c43bd9]" started-at="2021-02-28T15:36:45 ICT" name="cleanUp" finished-at="2021-02-28T15:36:46 ICT" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- TestWeb -->
+    </test> <!-- Command line test -->
+  </suite> <!-- TestWeb -->
+</testng-results>
