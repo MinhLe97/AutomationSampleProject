@@ -1,0 +1,6 @@
+node_modules
+yarn.clock
+.DS_Store
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
