@@ -1,9 +1,8 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@2
+  cypress: cypress-io/cypress@3
 workflows:
-  use-my-orb:
+  test:
     jobs:
       - cypress/run:
-          package-manager: yarn
-          start-command: cd cypressTest && yarn cy:run
+          cypress-command: 'cd cypressTest && npx cypress run'
