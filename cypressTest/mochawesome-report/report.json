@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-07-16T04:33:11.936Z",
+    "end": "2023-07-16T04:33:40.176Z",
+    "duration": 28240
+  },
+  "results": [
+    {
+      "uuid": "a273086f-8c3b-4145-b1a9-f8db7fae5c00",
+      "title": "",
+      "fullFile": "cypress/e2e/testWeb.cy.js",
+      "file": "cypress/e2e/testWeb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "806fdd77-2f70-488a-8c76-082cb4209214",
+          "title": "Unsplash page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "addImage",
+              "fullTitle": "Unsplash page addImage",
+              "timedOut": null,
+              "duration": 10893,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/Users/mac/Documents/AutomationSampleProject/cypressTest/cypress/screenshots/testWeb.cy.js/Unsplash page -- addImage (failed).png\"",
+              "code": "cy.visit('https://unsplash.com/');\ncy.get('[href=\"https://unsplash.com/login\"]').click();\ncy.get('#user_email').type(_user.default.email);\ncy.get('#user_password').type(_user.default.password);\ncy.get('[type=submit]').click();\ncy.get('[itemprop=\"contentUrl\"]').first().click();\nconst url = cy.url();\ncy.get('[data-test=\"photos-route\"] [title=\"Like\"]').click();\ncy.get('[class=\"ReactModalPortal\"] button').first().click();\ncy.visit('https://unsplash.com/@leminh1997/likes');\ncy.get('[itemprop=\"contentUrl\"]').invoke('attr', 'href').then(href => {\n  cy.log('href: ', href);\n  expect(url.should('eq', href));\n  cy.request({\n    method: 'DELETE',\n    url: `https://api.unsplash.com${href}/like`,\n    auth: {\n      'bearer': _user.default.token\n    }\n  }).then(resp => {\n    expect(resp.status).to.eq(200);\n  });\n});",
+              "err": {
+                "message": "AssertionError: expected 'https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30' to equal '/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'",
+                "estack": "AssertionError: expected 'https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30' to equal '/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'\n    at Context.eval (webpack:///./cypress/e2e/testWeb.cy.js:17:23)",
+                "diff": "- 'https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'\n+ '/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'\n"
+              },
+              "uuid": "a884a00d-f8b1-45f1-ac34-80155e1fb02b",
+              "parentUUID": "806fdd77-2f70-488a-8c76-082cb4209214",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a884a00d-f8b1-45f1-ac34-80155e1fb02b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10893,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "538b5fba-9fe5-4a78-b6e3-4357f6bb490a",
+      "title": "",
+      "fullFile": "cypress/e2e/testWebLogin.cy.js",
+      "file": "cypress/e2e/testWebLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b4a05ce7-477d-42f5-99b2-134ddfc0eb98",
+          "title": "Unsplash page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Unsplash page Login",
+              "timedOut": null,
+              "duration": 9328,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/Users/mac/Documents/AutomationSampleProject/cypressTest/cypress/screenshots/testWebLogin.cy.js/Unsplash page -- Login (failed).png\"",
+              "code": "cy.visit('https://unsplash.com/');\ncy.get('[href=\"https://unsplash.com/login\"]').click();\ncy.get('#user_email').type(_user.default.email);\ncy.get('#user_password1').type(_user.default.password);\ncy.get('[type=submit]').click();\ncy.get('[itemprop=\"contentUrl\"]').first().click();\nconst url = cy.url();\ncy.get('[data-test=\"photos-route\"] [title=\"Like\"]').click();\ncy.get('[class=\"ReactModalPortal\"] button').first().click();\ncy.visit('https://unsplash.com/@leminh1997/likes');\ncy.get('[itemprop=\"contentUrl\"]').invoke('attr', 'href').then(href => {\n  cy.log('href: ', href);\n  expect(url.should('eq', href));\n  cy.request({\n    method: 'DELETE',\n    url: `https://api.unsplash.com${href}/like`,\n    auth: {\n      'bearer': _user.default.token\n    }\n  }).then(resp => {\n    expect(resp.status).to.eq(200);\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#user_password1`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#user_password1`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/testWebLogin.cy.js:8:11)",
+                "diff": null
+              },
+              "uuid": "31ecbd52-e91f-4804-9e04-e62af9e948fe",
+              "parentUUID": "b4a05ce7-477d-42f5-99b2-134ddfc0eb98",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "31ecbd52-e91f-4804-9e04-e62af9e948fe"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9328,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

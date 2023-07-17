@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-07-16T04:33:11.936Z",
+    "end": "2023-07-16T04:33:23.931Z",
+    "duration": 11995,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a273086f-8c3b-4145-b1a9-f8db7fae5c00",
+      "title": "",
+      "fullFile": "cypress/e2e/testWeb.cy.js",
+      "file": "cypress/e2e/testWeb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "806fdd77-2f70-488a-8c76-082cb4209214",
+          "title": "Unsplash page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "addImage",
+              "fullTitle": "Unsplash page addImage",
+              "timedOut": null,
+              "duration": 10893,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/Users/mac/Documents/AutomationSampleProject/cypressTest/cypress/screenshots/testWeb.cy.js/Unsplash page -- addImage (failed).png\"",
+              "code": "cy.visit('https://unsplash.com/');\ncy.get('[href=\"https://unsplash.com/login\"]').click();\ncy.get('#user_email').type(_user.default.email);\ncy.get('#user_password').type(_user.default.password);\ncy.get('[type=submit]').click();\ncy.get('[itemprop=\"contentUrl\"]').first().click();\nconst url = cy.url();\ncy.get('[data-test=\"photos-route\"] [title=\"Like\"]').click();\ncy.get('[class=\"ReactModalPortal\"] button').first().click();\ncy.visit('https://unsplash.com/@leminh1997/likes');\ncy.get('[itemprop=\"contentUrl\"]').invoke('attr', 'href').then(href => {\n  cy.log('href: ', href);\n  expect(url.should('eq', href));\n  cy.request({\n    method: 'DELETE',\n    url: `https://api.unsplash.com${href}/like`,\n    auth: {\n      'bearer': _user.default.token\n    }\n  }).then(resp => {\n    expect(resp.status).to.eq(200);\n  });\n});",
+              "err": {
+                "message": "AssertionError: expected 'https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30' to equal '/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'",
+                "estack": "AssertionError: expected 'https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30' to equal '/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'\n    at Context.eval (webpack:///./cypress/e2e/testWeb.cy.js:17:23)",
+                "diff": "- 'https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'\n+ '/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-kOFvKxzph30'\n"
+              },
+              "uuid": "a884a00d-f8b1-45f1-ac34-80155e1fb02b",
+              "parentUUID": "806fdd77-2f70-488a-8c76-082cb4209214",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a884a00d-f8b1-45f1-ac34-80155e1fb02b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10893,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
