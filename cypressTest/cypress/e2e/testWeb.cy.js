@@ -12,6 +12,7 @@ describe('Unsplash page', () => {
         cy.get('[data-test="photos-route"] [title="Like"]').click();
         cy.get('[class="ReactModalPortal"] button').first().click();
         cy.visit('https://unsplash.com/@leminh1997/likes');
+        cy.log('href: ', url);
         cy.get('[itemprop="contentUrl"]').invoke('attr', 'href').then(href => {
             cy.log('href: ', href);
             expect(url.should('contain', href));

@@ -16,4 +16,5 @@ module.exports = defineConfig({
       })
     },
   },
+  experimentalWebKitSupport: true
 });
