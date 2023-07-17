@@ -1,1 +1,2 @@
 serenity-web-screenplay/.gradle
+**/mochawesome-report
